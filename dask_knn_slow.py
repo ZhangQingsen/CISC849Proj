@@ -112,7 +112,8 @@ class KNN:
     def get_params(self, deep=False):
         return {'n_neighbors': self.k}
 
-def my_dask_knn_slow_test(X, y):
+def dask_myKnn_slow_test1(X, y):
+    model_name = 'dask_myKnn_slow'
     time_start=time.time()
     test_size_split = 0.33
     X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size=test_size_split, shuffle=True)
@@ -143,16 +144,21 @@ def my_dask_knn_slow_test(X, y):
     seconds = time_elapse - hours * 3600 - mintues * 60
     print(f'time cost: {hours}h {mintues}m {seconds}s')
 
-    return accu_max, time_elapse    
+    return accu_max, time_elapse, model_name    
 
-def main():
-    sample_num = 30
-
+def dask_myKnn_slow_test(sample_num):
     X, y = make_classification(n_samples=sample_num, n_features=feature_num,
                     n_classes=2, random_state=None, chunks=50)
+    accu, time_elapse, model_name = dask_myKnn_slow_test1(X, y)
+    return accu, time_elapse, model_name
+
+def main():
+    sample_num = 50
+
+    accu, time_elapse, model_name = dask_myKnn_slow_test(sample_num)
     
 
-    accu, time_elapse = my_dask_knn_slow_test(X, y)
+    
     
     
 

@@ -11,6 +11,7 @@ feature_num = 16
 class_num = 7
 
 def dask_knn_test(X,y):
+    model_name = 'dask_knn'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -37,9 +38,10 @@ def dask_knn_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy k-value is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def dask_svm_test(X,y):
+    model_name = 'dask_svm'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -66,9 +68,10 @@ def dask_svm_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy gamma is: {gamma_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def dask_bays_test(X,y):
+    model_name = 'dask_bays'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -95,9 +98,10 @@ def dask_bays_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy iteration is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def dask_nn_test(X,y):
+    model_name = 'dask_nn'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -124,9 +128,10 @@ def dask_nn_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy iteration is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def dask_tree_test(X,y):
+    model_name = 'dask_tree'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -153,9 +158,10 @@ def dask_tree_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy gamma is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def dask_forest_test(X,y):
+    model_name = 'dask_forest'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -182,9 +188,10 @@ def dask_forest_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy iteration is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def dask_adaboost_test(X,y):
+    model_name = 'dask_adaboost'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -211,7 +218,7 @@ def dask_adaboost_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy iteration is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 
 def main():
@@ -223,13 +230,13 @@ def main():
                         flip_y=0.01, class_sep=1.0, hypercube=True,
                         shift=0.0, scale=1.0, shuffle=True, random_state=None)
         
-    accu, time_elapse = dask_knn_test(X,y)
-    accu, time_elapse = dask_svm_test(X,y)
-    accu, time_elapse = dask_bays_test(X,y)
-    accu, time_elapse = dask_nn_test(X,y)
-    accu, time_elapse = dask_tree_test(X,y)
-    accu, time_elapse = dask_forest_test(X,y)
-    accu, time_elapse = dask_adaboost_test(X,y)
+    accu, time_elapse, model_name = dask_knn_test(X,y)
+    accu, time_elapse, model_name = dask_svm_test(X,y)
+    accu, time_elapse, model_name = dask_bays_test(X,y)
+    accu, time_elapse, model_name = dask_nn_test(X,y)
+    accu, time_elapse, model_name = dask_tree_test(X,y)
+    accu, time_elapse, model_name = dask_forest_test(X,y)
+    accu, time_elapse, model_name = dask_adaboost_test(X,y)
 
     
     

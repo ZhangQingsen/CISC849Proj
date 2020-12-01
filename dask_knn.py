@@ -107,7 +107,8 @@ class KNN:
         return {'n_neighbors': self.k}
 
 
-def my_dask_knn_test(X, y):
+def dask_myKnn_test(X, y):
+    model_name = 'dask_myKnn'
     time_start=time.time()
     k_range = range(1, 31)
     k_max = 0
@@ -133,7 +134,7 @@ def my_dask_knn_test(X, y):
     seconds = time_elapse - hours * 3600 - mintues * 60
     print(f'time cost: {hours}h {mintues}m {seconds}s')
 
-    return accu_max, time_elapse
+    return accu_max, time_elapse, model_name
     
 
 def main():
@@ -150,7 +151,7 @@ def main():
     
     
 
-    accu, time_elapse = my_dask_knn_test(X, y)
+    accu, time_elapse, model_name = dask_myKnn_test(X, y)
     
     
 

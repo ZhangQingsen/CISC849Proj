@@ -6,6 +6,7 @@ feature_num = 16
 class_num = 7
 
 def knn_test(X,y):
+    model_name = 'knn'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -32,9 +33,10 @@ def knn_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy k-value is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def svm_test(X,y):
+    model_name = 'svm'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -61,9 +63,10 @@ def svm_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy gamma is: {gamma_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def bays_test(X,y):
+    model_name = 'bays'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -90,9 +93,10 @@ def bays_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy iteration is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def nn_test(X,y):
+    model_name = 'nn'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -119,9 +123,10 @@ def nn_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy iteration is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def tree_test(X,y):
+    model_name = 'tree'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -148,9 +153,10 @@ def tree_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy gamma is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def forest_test(X,y):
+    model_name = 'forest'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -177,9 +183,10 @@ def forest_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy iteration is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 def adaboost_test(X,y):
+    model_name = 'adaboost'
     time_start=time.time()
 
     k_range = range(1, 31)
@@ -206,7 +213,7 @@ def adaboost_test(X,y):
     print(f'time cost: {hours}h {mintues}m {seconds}s')
     print(f'the best accuracy iteration is: {k_max}, where the accuracy is: {accu_max}')
     
-    return accu, time_elapse
+    return accu, time_elapse, model_name
 
 
 def main():
@@ -218,13 +225,13 @@ def main():
                         flip_y=0.01, class_sep=1.0, hypercube=True,
                         shift=0.0, scale=1.0, shuffle=True, random_state=None)
         
-    # accu, time_elapse = knn_test(X,y)
-    # accu, time_elapse = svm_test(X,y)
-    accu, time_elapse = bays_test(X,y)
-    accu, time_elapse = nn_test(X,y)
-    accu, time_elapse = tree_test(X,y)
-    accu, time_elapse = forest_test(X,y)
-    accu, time_elapse = adaboost_test(X,y)
+    accu, time_elapse, model_name = knn_test(X,y)
+    accu, time_elapse, model_name = svm_test(X,y)
+    accu, time_elapse, model_name = bays_test(X,y)
+    accu, time_elapse, model_name = nn_test(X,y)
+    accu, time_elapse, model_name = tree_test(X,y)
+    accu, time_elapse, model_name = forest_test(X,y)
+    accu, time_elapse, model_name = adaboost_test(X,y)
 
     
     
