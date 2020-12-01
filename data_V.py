@@ -86,12 +86,12 @@ def main():
     # accu, time_elapse, model_name = dask_myKnn_slow_test(50)
     # dflist.append([50, model_name, time_elapse, accu])
 
-    test_all(50)
-    test_all(100)
-    test_all(500)
+    # test_all(50)
+    # test_all(100)
+    # test_all(500)
     # test_all(1000)
     # test_all(1500)
-    # test_all(2000)
+    test_all(2000)
     
     df = pd.DataFrame(dflist, columns=['n_sample', 'model', 'seconds', 'accuracy'])
     df.to_csv("result.csv",index=False,sep=',')

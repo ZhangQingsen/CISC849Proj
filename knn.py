@@ -105,7 +105,6 @@ def myKnn_test(X, y):
     #循环，取k=1到k=30，查看误差效果
     for k in k_range:
         knn = KNN(n_neighbors=k)
-        #cv参数决定数据集划分比例，这里是按照5:1划分训练集和测试集
         scores = model_selection.cross_validate(knn, X, y, cv=10, scoring='accuracy')
         accu = scores['test_score'].mean()
         if accu >= accu_max:
