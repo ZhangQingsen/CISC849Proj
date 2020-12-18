@@ -1,4 +1,4 @@
-# CISC849Proj
+# Dask Parallelism Performance
 
 This is a project that focus on analysis the parallelism performance of the Dask library for Python.
 
