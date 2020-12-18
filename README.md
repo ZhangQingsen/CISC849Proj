@@ -131,9 +131,59 @@ There are some left blank in result when data size is 10000 and above, because s
 
 Below are the plots generated from Excel based on the results, and we can visualize the comparison of performance.
 
+###### dask_myKnn_slow
 
+The time consuming bar chart of dask array version of our KNN method is shown below
+
+![dask_myKnn_slow](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/dask_myKnn_slow%20timing.png)
+
+###### myknn
+
+![myKnn time](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/myKnn%20timing%20comparison.png)
+
+![myKnn accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/myKnn%20accuracy%20comparison.png)
+
+###### KNN
+
+![KNN time](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/KNN%20timing%20comparison.png)
+
+![KNN accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/KNN%20accuracy%20comparison.png)
+
+###### SVM
+
+![SVM time](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/SVM%20timing%20comparison.png)
+
+![SVM accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/SVM%20accuracy%20comparison.png)
+
+###### Bays
+
+![Bays time](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/Naive%20Bays%20timing%20comparison.png)
+
+![Bays accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/Naive%20Bays%20accuracy%20comparison.png)
+
+###### MLP
+
+![MLP time](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/MLP%20timing%20comparison.png)
+
+![MLP accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/MLP%20accuracy%20comparison.png)
+
+###### Decision Tree
+
+![tree time](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/Decision%20Tree%20timing%20comparison.png)
+
+![tree accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/Decision%20Tree%20accuracy%20comparison.png)
+
+###### Random Forest
+
+![forest time](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/Random%20Forest%20timing%20comparison.png)
+
+![forest accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/Random%20Forest%20accuracy%20comparison.png)
+
+###### AdaBoost
+
+![AdaBoost time](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/AdaBoost%20timing%20comparison.png)
+
+![AdaBoost accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/AdaBoost%20accuracy%20comparison.png)
 
 We can see for a few amount of computation, it is not quite that the dask parallelism version to show the advantage, while the amount of computation is larger, the performance is clearly better.
-
-![image-20201218174854023](C:\Users\ZhangQingsen\AppData\Roaming\Typora\typora-user-images\image-20201218174854023.png)
 
