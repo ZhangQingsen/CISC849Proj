@@ -13,11 +13,10 @@ The contents are listed below:
 
 ### In this project:
 
-- ​	implement our own version of K Nearest Neighbor(KNN) myKnn
-
+- ​	implement our own version of K Nearest Neighbor(KNN) ***myKnn***
 - ​	make two Dask version: 
-  ​                              1). dask_myKnn, use Dask parallelism to speed up computation
-  ​                              2). dask_myKnn_slow, implemented with Dask array
+  1. ***dask_myKnn***, use Dask parallelism to speed up computation
+  2. ***dask_myKnn_slow***, implemented with Dask array
 - ​	call some common machine learning methods from sklearn and compare the performance with their Dask parallelism version
 
 
