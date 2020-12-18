@@ -134,3 +134,6 @@ Below are the plots generated from Excel based on the results, and we can visual
 
 
 We can see for a few amount of computation, it is not quite that the dask parallelism version to show the advantage, while the amount of computation is larger, the performance is clearly better.
+
+![image-20201218174854023](C:\Users\ZhangQingsen\AppData\Roaming\Typora\typora-user-images\image-20201218174854023.png)
+
