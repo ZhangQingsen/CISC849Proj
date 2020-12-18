@@ -1,7 +1,7 @@
 from sklearn import *
-from knn import *
-from dask_knn import *
-from dask_knn_slow import *
+from myKnn import *
+from dask_myKnn import *
+from dask_myKnn_slow import *
 from ml_test import *
 from dask_ml_test import *
 # visualization of the data and result
@@ -86,15 +86,22 @@ def main():
     # accu, time_elapse, model_name = dask_myKnn_slow_test(50)
     # dflist.append([50, model_name, time_elapse, accu])
 
-    # test_all(50)
+    test_all(50)
     # test_all(100)
     # test_all(500)
     # test_all(1000)
     # test_all(1500)
-    test_all(2000)
+    # test_all(2000)
+
+    # test_all(5000)
+    # test_all(10000)
+    # test_all(15000)
+    # test_all(20000)
+    # test_all(50000)
+    # test_all(500000)
     
     df = pd.DataFrame(dflist, columns=['n_sample', 'model', 'seconds', 'accuracy'])
-    df.to_csv("result.csv",index=False,sep=',')
+    df.to_csv("output.csv",index=False,sep=',')
     return
 
 
