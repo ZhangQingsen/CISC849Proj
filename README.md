@@ -2,7 +2,7 @@
 
 This is a project that focus on analysis the parallelism performance of the Dask library for Python.
 
-##### In this project:
+### In this project:
 
 ​	implement our own version of K Nearest Neighbor(KNN) myKnn
 
@@ -12,19 +12,19 @@ This is a project that focus on analysis the parallelism performance of the Dask
 
 ​	call some common machine learning methods from sklearn and compare the performance with their Dask parallelism version
 
-##### The environment is: 
+### The environment is: 
 
-###### System:
+#### System:
 
-​	 ![system information](\appendix\system information.png)
+​	 ![system information](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/system%20information.png)
 
 As shown above, since my system language is Chinese, it is in Chinese. However, we can see that the machine is ASUS GX531, the CPU is i7-9750H, which has 6 cores, and the RAM is 16.0 GB. There is no GPU included in this project.
 
-###### Python:
+#### Python:
 
 Python 3.7 is utilized in this project, python 2 may not be compatible
 
-###### Library:
+#### Library:
 
 The imported libraries are:
 
@@ -38,7 +38,7 @@ The imported libraries are:
 
 Other inclusive libraries attached from sklearn and dask can be check in the requirement text file.
 
-##### Dataset
+### Dataset
 
 Data portrait
 
@@ -48,13 +48,13 @@ We also retrieved a real world dataset from [**UCI Estimation of obesity levels 
 
 the obesity data looks like below:
 
-![obesity data](\appendix\obesity data.png)
+![obesity data](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/obesity%20data.png)
 
 it has 2112 rows, 16 features and 7 classes
 
 the features are listed below:
 
-![features](\appendix\features.png)
+![features](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/features.png)
 
 Our artificial datasets are based on this data set, therefore, our artificial datasets have the same amount features and classes, but the data sizes are various. We are calling the make_classification function from sklearn to create datasets:
 
@@ -71,7 +71,7 @@ X, y = datasets.make_classification(n_samples=sample_num, n_features=feature_num
 
 
 
-###### Dataset split
+#### Dataset split
 
 In this project, we are separating all datasets into 10 subsets, 9 for validation, and 1 for test. To achieve that, We are calling the cross_validate function from sklearn to create datasets:
 
@@ -84,17 +84,17 @@ Here KNN is an estimator we defined, there is no information about how to create
 
 
 
-##### How to run the code
+### How to run the code
 
 To make it easier to run, I have also upload the virtual environment folder to this repo, therefore, reduce the incompatibility from different versions of libraries. The commands are listed below:
 
-###### Activate the virtual environment:
+#### Activate the virtual environment:
 
 ```shell
 venv\Scripts\activate
 ```
 
-###### then run the main function.
+#### then run the main function.
 
 ```shell
 python data_V.py
@@ -102,7 +102,7 @@ python data_V.py
 
 
 
-##### File description:
+### File description:
 
 ***myKnn*** defines our version of KNN
 
@@ -120,10 +120,10 @@ python data_V.py
 
 
 
-##### Results:
+### Results:
 
 The result looks like this:
-![result data](\appendix\result data.png)
+![result data](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/result%20data.png)
 
 It shows the number of samples, the selected model, the running time in seconds, and the accuracy.
 
