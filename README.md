@@ -2,27 +2,24 @@
 
 This is a project that focus on analysis the parallelism performance of the Dask library for Python.
 
-[Project](https://github.com/ZhangQingsen/CISC849Proj#in-this-project)
+The contents are listed below:
 
-[Environment](https://github.com/ZhangQingsen/CISC849Proj#the-environment-is)
-
-[Datasets](https://github.com/ZhangQingsen/CISC849Proj#dataset)
-
-[How to run the code](https://github.com/ZhangQingsen/CISC849Proj#how-to-run-the-code)
-
-[File description](https://github.com/ZhangQingsen/CISC849Proj#file-description)
-
-[Result](https://github.com/ZhangQingsen/CISC849Proj#results)
+- [Project](https://github.com/ZhangQingsen/CISC849Proj#in-this-project)
+- [Environment](https://github.com/ZhangQingsen/CISC849Proj#the-environment-is)
+- [Datasets](https://github.com/ZhangQingsen/CISC849Proj#dataset)
+- [How to run the code](https://github.com/ZhangQingsen/CISC849Proj#how-to-run-the-code)
+- [File description](https://github.com/ZhangQingsen/CISC849Proj#file-description)
+- [Result](https://github.com/ZhangQingsen/CISC849Proj#results)
 
 ### In this project:
 
-​	implement our own version of K Nearest Neighbor(KNN) myKnn
+- ​	implement our own version of K Nearest Neighbor(KNN) myKnn
 
-​	make two Dask version: 1). dask_myKnn, use Dask parallelism to speed up computation
+- ​	make two Dask version: 
+  ​                              1). dask_myKnn, use Dask parallelism to speed up computation
+  ​                              2). dask_myKnn_slow, implemented with Dask array
+- ​	call some common machine learning methods from sklearn and compare the performance with their Dask parallelism version
 
-​												2). dask_myKnn_slow, implemented with Dask array
-
-​	call some common machine learning methods from sklearn and compare the performance with their Dask parallelism version
 
 ### The environment is: 
 
@@ -40,13 +37,14 @@ Python 3.7 is utilized in this project, python 2 may not be compatible
 
 The imported libraries are:
 
-​	***numpy*** for computation
+- ​	***numpy*** for computation
 
-​	***pandas*** for data export
+- ​	***pandas*** for data export
 
-​	***sklearn*** for machine learning method
+- ​	***sklearn*** for machine learning method
 
-​	***dask*** for parallelism
+- ​	***dask*** for parallelism
+
 
 Other inclusive libraries attached from sklearn and dask can be check in the requirement text file.
 
