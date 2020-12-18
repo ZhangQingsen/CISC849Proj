@@ -123,6 +123,7 @@ python data_V.py
 ### Results:
 
 The result looks like this:
+
 ![result data](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/result%20data.png)
 
 It shows the number of samples, the selected model, the running time in seconds, and the accuracy.
