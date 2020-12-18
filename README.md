@@ -141,6 +141,10 @@ There are some left blank in result when data size is 10000 and above, because s
 
 Below are the plots generated from Excel based on the results, and we can visualize the comparison of performance.
 
+For most of the plots, the X-axis is the number of samples, and Y-axis is the time it took or the accuracy it reaches.
+
+The blue line/bar presents the performance of this machine learning model while the orange line/bar measures dask parallelism version.
+
 ###### dask_myKnn_slow
 
 The time consuming bar chart of dask array version of our KNN method is shown below
@@ -195,5 +199,6 @@ The time consuming bar chart of dask array version of our KNN method is shown be
 
 ![AdaBoost accuracy](https://github.com/ZhangQingsen/CISC849Proj/blob/main/appendix/AdaBoost%20accuracy%20comparison.png)
 
-We can see for a few amount of computation, it is not quite that the dask parallelism version to show the advantage, while the amount of computation is larger, the performance is clearly better.
+We can see for a few amount of computation, it is not quite that the dask parallelism version to show the advantage, while the amount of computation is larger, the performance is clearly better while the accuracy isn't effect much.
 
+Also, by comparing models, we find out that KNN and the Multilayer perceptron(MLP) could learn from these artificial data well, yet they took lots of time. Although compared to other models, Naive Bays and AdaBoost learns extremely fast, they cannot learn well from our artificial data. Taking both timing and accuracy in considering, SVM is the best that takes a reasonable amount of time and performs well when the dataset is large enough.
