@@ -2,6 +2,18 @@
 
 This is a project that focus on analysis the parallelism performance of the Dask library for Python.
 
+[Project](https://github.com/ZhangQingsen/CISC849Proj#in-this-project)
+
+[Environment](https://github.com/ZhangQingsen/CISC849Proj#the-environment-is)
+
+[Datasets](https://github.com/ZhangQingsen/CISC849Proj#dataset)
+
+[How to run the code](https://github.com/ZhangQingsen/CISC849Proj#how-to-run-the-code)
+
+[File description](https://github.com/ZhangQingsen/CISC849Proj#file-description)
+
+[Result](https://github.com/ZhangQingsen/CISC849Proj#results)
+
 ### In this project:
 
 ​	implement our own version of K Nearest Neighbor(KNN) myKnn
@@ -38,7 +50,7 @@ The imported libraries are:
 
 Other inclusive libraries attached from sklearn and dask can be check in the requirement text file.
 
-### Dataset
+### Datasets
 
 Data portrait
 
